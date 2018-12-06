@@ -1,16 +1,9 @@
-import React, { Component } from 'react';
-import Tone from 'tone';
+import React from 'react';
 import './App.css';
+import Sound from "react-sound";
+import drumsound from './sounds/snare-drum1.mp3';
 
-/* In process of seeing about Web Audio API for sound:
-https://css-tricks.com/introduction-web-audio-api/ 
 
-for drum sounds:
-https://www.freesoundeffects.com/free-sounds/drum-loops-10031/
-
-Tonejs:
-
-*/
 
 class App extends React.Component {
   constructor(props) {
@@ -23,19 +16,19 @@ class App extends React.Component {
   }
 
   drumSound() {
-    console.log("Hitting the key");
+    console.log('Testing');
+    return <Sound url=drumsound />
   }
 
   render() {
 
-    var player = new Tone.Player({
-      "url": "./audio/FWDL.[mp3|ogg]",
-      "loop": true
-    }).toMaster();
 
     return (
       <div id="drum-machine">
         <div id="display">
+          <audio controls>
+            <source src={drumsound} type="audio/mpeg"/>
+          </audio>
           <DrumBox drumletter={this.state.letters[0]} drumSound={this.drumSound} />
           <DrumBox drumletter={this.state.letters[1]} />
           <DrumBox drumletter={this.state.letters[2]} />
@@ -53,10 +46,12 @@ class App extends React.Component {
 
 const DrumBox = (props) => {
   return (
+    <div>
     <input type="button"
       value={props.drumletter}
-      class="drum-padQ drum-pad"
+      className="drum-padQ drum-pad"
       onClick={props.drumSound} />
+   </div>
   )
 }
 
