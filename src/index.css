@@ -23,3 +23,8 @@ code {
   display: block;
   border-radius: 100%;
 }
+
+#photo {
+  width: 100px;
+  height: 100px;
+}
