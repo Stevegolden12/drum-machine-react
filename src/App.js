@@ -1,14 +1,22 @@
 { /* Think logic is good need to:
- * add the other drumsounds,
- * add the drumsounds to the switch statement
- * replace the drumsound1 with drumtype in the Sound component 
+ * Add durmsound to state
+ * use setstate when button is clicked
  */}
-
+/* eslint-disable import/first */
 
 import React from 'react';
 import './App.css';
 import Sound from "react-sound";
 import drumsound1 from './sounds/snare-drum1.mp3';
+import drumsound2 from './sounds/snare-drum2.wav';
+import drumsound3 from './sounds/cymbol-drum1.wav';
+import drumsound4 from './sounds/hat-drum1.wav';
+import drumsound5 from './sounds/kick-drum1.wav';
+import drumsound6 from './sounds/shaker-drum1.wav';
+import drumsound7 from './sounds/tamb-drum1.wav';
+import drumsound8 from './sounds/snare-drum2.wav';
+import drumsound9 from './sounds/kick-drum1.wav';
+
 
 
 class App extends React.Component {
@@ -17,8 +25,15 @@ class App extends React.Component {
 
     this.state = {
       letters: ["Q", "W", "E", "A", "S", "D", "Z", "X", "C"],
+     
     }
 
+  }
+
+  componentDidUpdate(prevProps) {
+    // Typical usage (don't forget to compare props):
+   
+    }
   }
    
   render() {
@@ -34,8 +49,7 @@ class App extends React.Component {
           <DrumBox drumletter={this.state.letters[5]} />
           <DrumBox drumletter={this.state.letters[6]} />
           <DrumBox drumletter={this.state.letters[7]} />
-          <DrumBox drumletter={this.state.letters[8]} />
-          */}
+          <DrumBox drumletter={this.state.letters[8]} />          
         </div>
       </div>
     )
@@ -68,28 +82,28 @@ class DrumBox extends React.Component {
         drumtype = drumsound1;
         break;
       case 'W':
-        drumtype = drumsound1;
+        drumtype = drumsound2;
         break;
       case 'E':
-        drumtype = drumsound1;
+        drumtype = drumsound3;
         break;
       case 'A':
-        drumtype = drumsound1;
+        drumtype = drumsound4;
         break;
       case 'S':
-        drumtype = drumsound1;
+        drumtype = drumsound5;
         break;
       case 'D':
-        drumtype = drumsound1;
+        drumtype = drumsound6;
         break;
       case 'Z':
-        drumtype = drumsound1;
+        drumtype = drumsound7;
         break;
       case 'X':
-        drumtype = drumsound1;
+        drumtype = drumsound8;
         break;
       case 'C':
-        drumtype = drumsound1;
+        drumtype = drumsound9;
         break;
       default:
         return drumtype = drumsound1;
