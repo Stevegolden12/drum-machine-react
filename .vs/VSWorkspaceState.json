@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\public",
-    "\\src"
+    "\\src",
+    "\\src\\sounds"
   ],
-  "SelectedNode": "\\src\\App.js",
+  "SelectedNode": "\\src\\sounds\\Tamb-drum1.wav",
   "PreviewInSolutionExplorer": false
 }
