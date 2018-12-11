@@ -39,6 +39,13 @@ class App extends React.Component {
 
     return (
       <div id="drum-machine">
+        <section class="index__mainTitle">Drum Machine</section>
+        <section class="index__knobDisplay">
+          <Knob />
+          <Knob />
+          <Knob />
+          <Knob />
+        </section>
         <div id="display">
           <DrumBox drumletter={this.state.letters[0]} drumsound={drumsoundQ}/>
           <DrumBox drumletter={this.state.letters[1]} drumsound={drumsoundW}/>
@@ -47,12 +54,27 @@ class App extends React.Component {
           <DrumBox drumletter={this.state.letters[4]} drumsound={drumsoundS}/>
           <DrumBox drumletter={this.state.letters[5]} drumsound={drumsoundD}/>
           <DrumBox drumletter={this.state.letters[6]} drumsound={drumsoundZ}/>
-          <DrumBox drumletter={this.state.letters[7]} drumsound={drumsoundX}/>
-          <DrumBox drumletter={this.state.letters[8]} drumsound={drumsoundC}/>          
+          <DrumBox drumletter={this.state.letters[7]} drumsound={drumsoundX} />
+          <div className="index__centerDiv">
+            <DrumBox drumletter={this.state.letters[8]} drumsound={drumsoundC} /> 
+          </div>
         </div>
       </div>
     )
   }
+}
+
+const Knob = () => {
+  return(
+  <div class="large-knob">
+    <div class="large-knob-shape shapeGR">
+      <div class="large-knob-beveler">
+        <div class="large-knob-marker"></div>
+      </div>
+    </div>
+    <div class="svg-wrapp"></div>
+    </div>
+    )
 }
 
 class DrumBox extends React.Component {
@@ -76,7 +98,7 @@ class DrumBox extends React.Component {
       <div>
         <input type="button"
           value={this.props.drumletter}
-          className="drum-pad clip"
+          className="drum-pad clip action-button shadow animate blue"
           id={`drumpad${this.props.drumletter}`}
           onClick={this.isClicked}
         />
