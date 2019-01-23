@@ -31,7 +31,15 @@ body {
   text-transform: uppercase;
   font-size: 14px;
   font-family: 'Oswald', sans-serif;
+  transform: rotate(0deg);
+  -webkit-transition: transform 6s;
 }
+
+.large-knob:hover {
+  transform: rotate(220deg);
+ -webkit-transition: transform 3s;
+}
+
 .svg-wrapp {
   background: url("http://imgh.us/noun_23507_cc2_1.svg");
   background-size: cover;
