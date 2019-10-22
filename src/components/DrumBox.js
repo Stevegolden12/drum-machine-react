@@ -1,5 +1,6 @@
 import React from 'react';
 import Sound from "react-sound";
+import PropTypes from 'prop-types';
 
 class DrumBox extends React.Component {
   constructor(props) {
@@ -32,6 +33,8 @@ class DrumBox extends React.Component {
   }
 }
 
-
+DrumBox.propTypes = {
+  clicked: PropTypes.bool
+}
 
 export default DrumBox
