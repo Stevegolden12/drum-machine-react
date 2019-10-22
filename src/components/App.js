@@ -20,7 +20,7 @@ import drumsoundC from '../sounds/kick-drum1.wav';
 import Knob from './Knob';
 import DrumBox from './DrumBox'
 
-
+import PropTypes from 'prop-types';
 
 class App extends React.Component {
   constructor(props) {
@@ -67,8 +67,9 @@ class App extends React.Component {
   }
 }
 
-
-
+App.propTypes = {
+  letters: PropTypes.array
+}
 
 
 
