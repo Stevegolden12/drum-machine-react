@@ -1,3 +1,6 @@
+#Drum Machine 
+Where you can hit the buttons and you can listen to different drum sounds.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -42,3 +45,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+###Acknowledgment
+Thank you to freeCodeCamp for all the help in learning React so I could create this app.
+
