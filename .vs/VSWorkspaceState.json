@@ -3,8 +3,9 @@
     "",
     "\\public",
     "\\src",
+    "\\src\\components",
     "\\src\\sounds"
   ],
-  "SelectedNode": "\\src\\sounds\\Tamb-drum1.wav",
+  "SelectedNode": "\\src\\components\\DrumBox.js",
   "PreviewInSolutionExplorer": false
 }
